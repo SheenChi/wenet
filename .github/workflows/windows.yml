@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  RUNTIME_DIR: runtime/server/x86
-
+  RUNTIME_DIR: runtime/LibTorch
 jobs:
   build:
     runs-on: windows-latest

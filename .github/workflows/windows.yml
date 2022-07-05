@@ -23,7 +23,8 @@ jobs:
         run: |
           cd ${{ env.RUNTIME_DIR }}
           mkdir openfst
-          cp -r fc_base/openfst-build/src/bin/Release/*.exe openfst
+          #cp -r fc_base/openfst-build/src/bin/Release/*.exe openfst
+          find . -name "fst*.exe" -exec cp -r {} openfst \;
 
           mkdir -p wenet/kaldi
           cp build/*.dll wenet
